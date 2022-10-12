@@ -2,7 +2,9 @@ local Remap = require("gip.keymap")
 local nnoremap = Remap.nnoremap
 local vnoremap = Remap.vnoremap
 local inoremap = Remap.inoremap
+local xnoremap = Remap.xnoremap
 
+xnoremap("<leader>p", "\"_dP")
 
 nnoremap("<leader>c", ":q<CR>")
 
