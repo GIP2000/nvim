@@ -32,6 +32,14 @@ autocmd({"BufWritePre"}, {
     command = "%s/\\s\\+$//e",
 })
 
+autocmd({"BufWritePre"}, {
+    group = GIPGroup,
+    pattern = "*",
+    callback = function()
+        vim.lsp.buf.formatting_sync()
+    end
+})
+
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
