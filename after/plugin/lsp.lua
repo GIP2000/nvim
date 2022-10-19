@@ -109,6 +109,8 @@ require'lspconfig'.cssmodules_ls.setup{}
 require("lspconfig").tsserver.setup(config())
 require("lspconfig").svelte.setup(config())
 require("lspconfig").cssls.setup(config())
+require'lspconfig'.pyright.setup{}
+
 require'lspconfig'.pylsp.setup{
   settings = {
     pylsp = {
