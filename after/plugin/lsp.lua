@@ -109,20 +109,7 @@ require'lspconfig'.cssmodules_ls.setup{}
 require("lspconfig").tsserver.setup(config())
 require("lspconfig").svelte.setup(config())
 require("lspconfig").cssls.setup(config())
-require'lspconfig'.pyright.setup{}
-
-require'lspconfig'.pylsp.setup{
-  settings = {
-    pylsp = {
-      plugins = {
-        pycodestyle = {
-          ignore = {'W391'},
-          maxLineLength = 100
-        }
-      }
-    }
-  }
-}
+require("lspconfig").jedi_language_server.setup(config())
 require("lspconfig").prismals.setup(config())
 require("lspconfig").rust_analyzer.setup(config({
 	cmd = { "rustup", "run", "nightly", "rust-analyzer" },
