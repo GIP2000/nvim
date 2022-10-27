@@ -106,6 +106,7 @@ end
 
 require'lspconfig'.clangd.setup{}
 require'lspconfig'.cssmodules_ls.setup{}
+require'lspconfig'.sqlls.setup{}
 require("lspconfig").tsserver.setup(config())
 require("lspconfig").svelte.setup(config())
 require("lspconfig").cssls.setup(config())
