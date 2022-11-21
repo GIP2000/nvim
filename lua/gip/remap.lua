@@ -21,4 +21,4 @@ nnoremap("<C-h>", "<C-w>h")
 nnoremap("<C-l>", "<C-w>l")
 nnoremap("<leader>v", "<C-w>v")
 
-nnoremap("<leader>e", "<C-w>v<cmd>Ex<CR>:vertical resize 30<CR>")
+nnoremap("<leader>e", "<cmd>Ex<CR>")
