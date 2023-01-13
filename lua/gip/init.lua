@@ -26,13 +26,13 @@ autocmd('TextYankPost', {
     end,
 })
 
-autocmd({"BufWritePre"}, {
+autocmd({ "BufWritePre" }, {
     group = GIPGroup,
     pattern = "*",
     command = "%s/\\s\\+$//e",
 })
 
-autocmd({"BufWritePre"}, {
+autocmd({ "BufWritePre" }, {
     group = GIPGroup,
     pattern = "*",
     callback = function()
