@@ -35,11 +35,6 @@ return require('packer').startup(function(use)
     }
 
     use("nvim-lua/plenary.nvim")
-    -- LSP / completion
-    -- use("neovim/nvim-lspconfig")
-    -- use("hrsh7th/cmp-nvim-lsp")
-    -- use("hrsh7th/cmp-buffer")
-    -- use("hrsh7th/nvim-cmp")
     use("tzachar/cmp-tabnine", { run = "./install.sh", requires = 'hrsh7th/nvim-cmp' })
     use("onsails/lspkind-nvim")
     use("nvim-lua/lsp_extensions.nvim")
@@ -65,5 +60,8 @@ return require('packer').startup(function(use)
     use("TimUntersberger/neogit")
     -- Auto comments
     use('numToStr/Comment.nvim')
+
+    -- undotree
+    use("mbbill/undotree")
 
 end)
