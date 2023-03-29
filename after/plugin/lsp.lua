@@ -13,18 +13,6 @@ lsp.on_attach(function()
     nnoremap("[d", function() vim.diagnostic.goto_next() end)
     nnoremap("]d", function() vim.diagnostic.goto_prev() end)
     nnoremap("<leader>la", function() vim.lsp.buf.code_action() end)
-    nnoremap("<leader>la", function() vim.lsp.buf.code_action({
-            filter = function(code_action)
-                if not code_action or not code_action.data then
-                    return false
-                end
-
-                local data = code_action.data.id
-                return string.sub(data, #data - 1, #data) == ":0"
-            end,
-            apply = true
-        })
-    end)
     nnoremap("gr", function() vim.lsp.buf.references() end)
     nnoremap("<leader>lr", function() vim.lsp.buf.rename() end)
     nnoremap("<leader>lh", function() vim.lsp.buf.signature_help() end)
