@@ -18,8 +18,8 @@ vnoremap("<C-k>", ":m '<-2<CR>gv=gv")
 
 -- Split stuff
 -- deprecated due to yabai
--- nnoremap("<C-h>", "<C-w>h")
--- nnoremap("<C-l>", "<C-w>l")
+nnoremap("<C-h>", "<C-w>h")
+nnoremap("<C-l>", "<C-w>l")
 nnoremap("<leader>v", "<C-w>v")
 
 nnoremap("<leader>e", "<cmd>Ex<CR>")
