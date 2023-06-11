@@ -36,7 +36,7 @@ autocmd({ "BufWritePre" }, {
     group = GIPGroup,
     pattern = "*",
     callback = function()
-        vim.lsp.buf.formatting_sync()
+        vim.lsp.buf.format()
     end
 })
 

@@ -33,6 +33,13 @@ return require('packer').startup(function(use)
             -- {'rafamadriz/friendly-snippets'},
         }
     }
+    use({
+        "jay-babu/mason-null-ls.nvim",
+        requires = { { "nvim-lua/plenary.nvim" },
+            { "williamboman/mason.nvim" },
+            { "jose-elias-alvarez/null-ls.nvim" }
+        },
+    })
 
     use("nvim-lua/plenary.nvim")
     use("tzachar/cmp-tabnine", { run = "./install.sh", requires = 'hrsh7th/nvim-cmp' })
@@ -63,5 +70,4 @@ return require('packer').startup(function(use)
 
     -- undotree
     use("mbbill/undotree")
-
 end)
