@@ -4,7 +4,7 @@ local vnoremap = Remap.vnoremap
 local inoremap = Remap.inoremap
 local xnoremap = Remap.xnoremap
 
-xnoremap("<leader>p", "\"_dP")
+xnoremap("<leader>p", '"_dP')
 
 nnoremap("<leader>c", ":q<CR>")
 
@@ -22,4 +22,4 @@ nnoremap("<C-h>", "<C-w>h")
 nnoremap("<C-l>", "<C-w>l")
 nnoremap("<leader>v", "<C-w>v")
 
-nnoremap("<leader>e", "<cmd>Ex<CR>")
+-- nnoremap("<leader>e", "<cmd>Ex<CR>")
