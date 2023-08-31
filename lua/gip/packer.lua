@@ -55,7 +55,7 @@ return require("packer").startup(function(use)
 	use("nvim-treesitter/playground")
 	use("romgrk/nvim-treesitter-context")
 	-- Bracket Pair Colorizer
-	use("p00f/nvim-ts-rainbow")
+	-- use("p00f/nvim-ts-rainbow")
 	-- Telescope
 	use("nvim-telescope/telescope.nvim", {
 		requires = "nvim-lua/plenary.nvim",
