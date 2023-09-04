@@ -9,7 +9,6 @@ GIPGroup = augroup('GIP', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
-local netrw_group = augroup('NetRw', {})
 
 function R(name)
     require("plenary.reload").reload_module(name)

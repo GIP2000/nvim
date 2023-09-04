@@ -5,6 +5,8 @@ local inoremap = Remap.inoremap
 local xnoremap = Remap.xnoremap
 
 xnoremap("<leader>p", '"_dP')
+xnoremap("<leader>y", '"*y')
+
 
 nnoremap("<leader>c", ":q<CR>")
 
@@ -17,9 +19,12 @@ vnoremap("<C-j>", ":m '>+1<CR>gv=gv")
 vnoremap("<C-k>", ":m '<-2<CR>gv=gv")
 
 -- Split stuff
--- deprecated due to yabai
 nnoremap("<C-h>", "<C-w>h")
 nnoremap("<C-l>", "<C-w>l")
+nnoremap("<C-j>", "<C-w>j")
+nnoremap("<C-k>", "<C-w>k")
 nnoremap("<leader>v", "<C-w>v")
+nnoremap("<leader>s", ":horizontal split<CR>")
+
 
 -- nnoremap("<leader>e", "<cmd>Ex<CR>")

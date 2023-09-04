@@ -5,40 +5,53 @@ local inoremap = Remap.inoremap
 lsp.preset("recommended")
 
 lsp.on_attach(function()
-	nnoremap("K", function()
-		vim.lsp.buf.hover()
-	end)
-	nnoremap("gd", function()
-		vim.lsp.buf.definition()
-	end)
-	nnoremap("gi", function()
-		vim.lsp.buf.implementation()
-	end)
-	nnoremap("<leader>vws", function()
-		vim.lsp.buf.workspace_symbol()
-	end)
-	nnoremap("<leader>ld", function()
-		vim.diagnostic.open_float()
-	end)
-	nnoremap("[d", function()
-		vim.diagnostic.goto_next()
-	end)
-	nnoremap("]d", function()
-		vim.diagnostic.goto_prev()
-	end)
-	nnoremap("<leader>la", function()
-		vim.lsp.buf.code_action()
-	end)
-	nnoremap("gr", function()
-		vim.lsp.buf.references()
-	end)
-	nnoremap("<leader>lr", function()
-		vim.lsp.buf.rename()
-	end)
-	nnoremap("<leader>lh", function()
-		vim.lsp.buf.signature_help()
-	end)
+    nnoremap("K", function()
+        vim.lsp.buf.hover()
+    end)
+    nnoremap("gd", function()
+        vim.lsp.buf.definition()
+    end)
+    nnoremap("gi", function()
+        vim.lsp.buf.implementation()
+    end)
+    nnoremap("<leader>vws", function()
+        vim.lsp.buf.workspace_symbol()
+    end)
+    nnoremap("<leader>ld", function()
+        vim.diagnostic.open_float()
+    end)
+    nnoremap("[d", function()
+        vim.diagnostic.goto_next()
+    end)
+    nnoremap("]d", function()
+        vim.diagnostic.goto_prev()
+    end)
+    nnoremap("<leader>la", function()
+        vim.lsp.buf.code_action()
+    end)
+    nnoremap("gr", function()
+        vim.lsp.buf.references()
+    end)
+    nnoremap("<leader>lr", function()
+        vim.lsp.buf.rename()
+    end)
+    nnoremap("<leader>lh", function()
+        vim.lsp.buf.signature_help()
+    end)
 end)
+
+require('lspconfig').eslint.setup({
+    settings = {
+        format = true,
+        codeActionOnSave = {
+            enabled = true,
+            mode = "all"
+        }
+    }
+})
+
+
+
 lsp.setup()
 --
 -- local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -46,22 +59,25 @@ lsp.setup()
 --
 -- -- Setup nvim-cmp.
 local cmp = require("cmp")
-local cmp_mappings = lsp.defaults.cmp_mappings({
-	["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
-	["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
-	["<C-y>"] = cmp.mapping.confirm({ select = true }),
-	["<C-Space>"] = cmp.mapping.complete(),
-})
-
-lsp.setup_nvim_cmp({
-	mapping = cmp_mappings,
+cmp.setup({
+    sources = {
+        { name = 'cmp_tabnine' },
+        { name = "nvim_lsp" },
+    },
+    mapping = {
+        ["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
+        ["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
+        ["<CR>"] = cmp.mapping.confirm({ select = true }),
+        ["<C-y>"] = cmp.mapping.confirm({ select = true }),
+        ["<C-Space>"] = cmp.mapping.complete(),
+    }
 })
 
 local null_ls = require("null-ls")
 null_ls.setup()
 require("mason-null-ls").setup({
-	automatic_setup = true,
-	handlers = {},
+    automatic_setup = true,
+    handlers = {},
 })
 
 -- local lspkind = require("lspkind")
