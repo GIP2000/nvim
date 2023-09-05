@@ -5,7 +5,7 @@ local inoremap = Remap.inoremap
 local xnoremap = Remap.xnoremap
 
 xnoremap("<leader>p", '"_dP')
-xnoremap("<leader>y", '"*y')
+Remap.nmap("<leader>y", '"*y')
 
 
 nnoremap("<leader>c", ":q<CR>")
