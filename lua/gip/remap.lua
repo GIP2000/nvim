@@ -21,8 +21,8 @@ vnoremap("<C-k>", ":m '<-2<CR>gv=gv")
 -- Split stuff
 nnoremap("<C-h>", "<C-w>h")
 nnoremap("<C-l>", "<C-w>l")
-nnoremap("<C-j>", "<C-w>j")
-nnoremap("<C-k>", "<C-w>k")
+-- nnoremap("<C-j>", "<C-w>j")
+-- nnoremap("<C-k>", "<C-w>k")
 nnoremap("<leader>v", "<C-w>v")
 nnoremap("<leader>s", ":horizontal split<CR>")
 
