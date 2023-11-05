@@ -1,8 +1,4 @@
-require("gip.set")
-require("gip.packer")
-require("gip.remap")
-require("gip.telescope")
-require("gip.neogit")
+require("gip.oil")
 
 local augroup = vim.api.nvim_create_augroup
 GIPGroup = augroup('GIP', {})
@@ -38,7 +34,3 @@ autocmd({ "BufWritePre" }, {
         vim.lsp.buf.format()
     end
 })
-
-vim.g.netrw_browse_split = 0
-vim.g.netrw_banner = 0
-vim.g.netrw_winsize = 25

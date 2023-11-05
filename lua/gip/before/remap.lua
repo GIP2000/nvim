@@ -25,6 +25,3 @@ nnoremap("<C-l>", "<C-w>l")
 -- nnoremap("<C-k>", "<C-w>k")
 nnoremap("<leader>v", "<C-w>v")
 nnoremap("<leader>s", ":horizontal split<CR>")
-
-
--- nnoremap("<leader>e", "<cmd>Ex<CR>")
