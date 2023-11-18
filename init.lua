@@ -29,6 +29,7 @@ require("lazy").setup({
         "nvim-lualine/lualine.nvim",
         opts = {}
     },
+    'tpope/vim-fugitive',
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',

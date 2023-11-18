@@ -9,6 +9,7 @@ Remap.nmap("<leader>y", '"*y')
 
 
 nnoremap("<leader>c", ":q<CR>")
+nnoremap("<leader>gs", ":Git<CR>")
 
 -- Move line up or down
 nnoremap("<C-k>", ":m -2<CR>==")
