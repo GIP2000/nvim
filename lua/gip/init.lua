@@ -27,10 +27,10 @@ autocmd({ "BufWritePre" }, {
     command = "%s/\\s\\+$//e",
 })
 
-autocmd({ "BufWritePre" }, {
-    group = GIPGroup,
-    pattern = "*",
-    callback = function()
-        vim.lsp.buf.format()
-    end
-})
+-- autocmd({ "BufWritePre" }, {
+--     group = GIPGroup,
+--     pattern = "*",
+--     callback = function()
+--         vim.lsp.buf.format()
+--     end
+-- })
