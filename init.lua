@@ -141,6 +141,8 @@ require("lazy").setup({
             ft('typescript,javascript,typescriptreact'):fmt("prettier")
             -- :lint("eslint_d")
 
+            ft("rust"):fmt("rustfmt")
+
             require("guard").setup({
                 fmt_on_save = true,
             })
