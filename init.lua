@@ -222,22 +222,50 @@ require("lazy").setup({
 		end,
 	},
 	{
-		"kristijanhusak/vim-dadbod-ui",
-		dependencies = {
-			{ "tpope/vim-dadbod", lazy = true },
-			{ "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
-		},
-		cmd = {
-			"DBUI",
-			"DBUIToggle",
-			"DBUIAddConnection",
-			"DBUIFindBuffer",
-		},
-		init = function()
-			-- Your DBUI configuration
-			vim.g.db_ui_use_nerd_fonts = 1
-		end,
+		"vhyrro/luarocks.nvim",
+		priority = 1000,
+		config = true,
 	},
+	{
+		"nvim-neorg/neorg",
+		dependencies = { "luarocks.nvim" },
+		version = "*",
+		config = function()
+			require("neorg").setup({
+				load = {
+					["core.defaults"] = {},
+					["core.concealer"] = {},
+					["core.journal"] = {},
+					["core.dirman"] = {
+						config = {
+							workspaces = {
+								notes = "~/Documents/notes",
+							},
+							default_workspace = "notes",
+						},
+					},
+				},
+			})
+            vim.wo.foldlevel = 99
+            vim.wo.conceallevel = 2
+		end,
+	}, -- {
+	-- 	"kristijanhusak/vim-dadbod-ui",
+	-- 	dependencies = {
+	-- 		{ "tpope/vim-dadbod", lazy = true },
+	-- 		{ "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
+	-- 	},
+	-- 	cmd = {
+	-- 		"DBUI",
+	-- 		"DBUIToggle",
+	-- 		"DBUIAddConnection",
+	-- 		"DBUIFindBuffer",
+	-- 	},
+	-- 	init = function()
+	-- 		-- Your DBUI configuration
+	-- 		vim.g.db_ui_use_nerd_fonts = 1
+	-- 	end,
+	-- },
 })
 
 require("gip")

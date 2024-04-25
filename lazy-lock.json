@@ -11,8 +11,10 @@
   "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
   "lsp-zero.nvim": { "branch": "v3.x", "commit": "8a9ee4e11a3e23101d1d1d11aaac3159ad925cc9" },
   "lualine.nvim": { "branch": "master", "commit": "2248ef254d0a1488a72041cfb45ca9caada6d994" },
+  "luarocks.nvim": { "branch": "main", "commit": "d3dda396d66e484590f253d1ac6d8980e3130807" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "4f81a9213fab94d4c074341acdf7118aaf959275" },
   "mason.nvim": { "branch": "main", "commit": "41e75af1f578e55ba050c863587cffde3556ffa6" },
+  "neorg": { "branch": "main", "commit": "c17b8e9e7327e03f78fbdccfb15abd09ec607bd0" },
   "nvim-cmp": { "branch": "main", "commit": "0b751f6beef40fd47375eaf53d3057e0bfa317e4" },
   "nvim-lspconfig": { "branch": "master", "commit": "daaf00a77805e113acf8ccc02dd8c3403d691683" },
   "nvim-treesitter": { "branch": "master", "commit": "b8fbd13277aae47fecdf7ec63731fa1f9918ac07" },
@@ -25,8 +27,5 @@
   "telescope.nvim": { "branch": "master", "commit": "e4c62dedd760d339bea5b8325c2d918d87476d00" },
   "tokyonight.nvim": { "branch": "main", "commit": "f247ee700b569ed43f39320413a13ba9b0aef0db" },
   "undotree": { "branch": "master", "commit": "36ff7abb6b60980338344982ad4cdf03f7961ecd" },
-  "vim-dadbod": { "branch": "master", "commit": "738cfc2ea6a1510fe23cba9006fef9291be70f7b" },
-  "vim-dadbod-completion": { "branch": "master", "commit": "c920cb0ba3dff4b1b0ed373e1c0b3007dec696c2" },
-  "vim-dadbod-ui": { "branch": "master", "commit": "9ddb0623e69d696b7a8355b93e3950a8dc6e00a0" },
   "vim-fugitive": { "branch": "master", "commit": "46eaf8918b347906789df296143117774e827616" }
 }
