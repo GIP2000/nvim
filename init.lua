@@ -154,6 +154,8 @@ require("lazy").setup({
 
 			ft("lua"):fmt("stylua")
 
+			ft("python"):fmt("black")
+
 			require("guard").setup({
 				fmt_on_save = true,
 			})
