@@ -16,6 +16,11 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		priority = 1000,
+	},
+	{
 		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
@@ -246,8 +251,8 @@ require("lazy").setup({
 					},
 				},
 			})
-            vim.wo.foldlevel = 99
-            vim.wo.conceallevel = 2
+			vim.wo.foldlevel = 99
+			vim.wo.conceallevel = 3
 		end,
 	}, -- {
 	-- 	"kristijanhusak/vim-dadbod-ui",
